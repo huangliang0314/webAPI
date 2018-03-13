@@ -51,7 +51,7 @@ namespace WebAPI.Controllers
         }
 
         // DELETE: api/BookChapter/5
-        public void Delete(int id)
+        public void DeleteBookChapter(int id)
         {
             chapters.Remove(chapters.Where(r => r.Number == id).Single());
         }
