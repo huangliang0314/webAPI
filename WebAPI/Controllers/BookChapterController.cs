@@ -44,10 +44,18 @@ namespace WebAPI.Controllers
         }
 
         // PUT: api/BookChapter/5
-        public void PutBookChapter(int id, [FromBody]BookChapter value)
+        public IHttpActionResult PutBookChapter(int id, [FromBody]BookChapter value)
         {
-            chapters.Remove(chapters.Where(r => r.Number == id).Single());
-            chapters.Add(value);
+            try
+            {
+                chapters.Remove(chapters.Where(r => r.Number == id).Single());
+                chapters.Add(value);
+                return Ok();
+            }
+            catch (InvalidOperationException)
+            {
+                return BadRequest();
+            }
         }
 
         // DELETE: api/BookChapter/5
