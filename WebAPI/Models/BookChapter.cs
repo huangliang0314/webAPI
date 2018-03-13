@@ -12,5 +12,7 @@ namespace WebAPI.Models
         public string Title { get; set; }
 
         public int Pages { get; set; }
+
+        public int Pages1 { get; set; }
     }
 }
