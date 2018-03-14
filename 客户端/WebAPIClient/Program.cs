@@ -7,7 +7,7 @@ using System.Net.Http.Formatting;
 using WebAPI.Models;
 
 
-namespace WebAPIClient
+namespace WebAPIClientGET
 {
     class Program
     {
@@ -40,7 +40,7 @@ namespace WebAPIClient
             Console.ReadLine();
         }
 
-        private static async Task ReadArrSampleJson()
+        public static async Task ReadArrSampleJson()
         {
             HttpClient lClient = new HttpClient();
             lClient.BaseAddress = new Uri("http://localhost:50626");
@@ -54,7 +54,7 @@ namespace WebAPIClient
             }
         }
 
-        private static async Task ReadArrSampleXML()
+        public static async Task ReadArrSampleXML()
         {
             HttpClient lClient = new HttpClient();
             lClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/xml"));
@@ -66,7 +66,7 @@ namespace WebAPIClient
             Console.WriteLine(xe);
         }
 
-        private static async Task ReadArrSampleExtention()
+        public static async Task ReadArrSampleExtention()
         {
             HttpClient lClient = new HttpClient();
             lClient.BaseAddress = new Uri("http://localhost:50626");

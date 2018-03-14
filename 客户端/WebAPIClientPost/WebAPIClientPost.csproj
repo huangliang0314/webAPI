@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD0C816F-331B-4BB3-A1FD-E7E3A32D84B2}</ProjectGuid>
+    <ProjectGuid>{F15EFD80-A2AB-4404-A7A0-0997FF4C5EDE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WebAPIClientGET</RootNamespace>
-    <AssemblyName>WebAPIClientGET</AssemblyName>
+    <RootNamespace>WebAPIClientPost</RootNamespace>
+    <AssemblyName>WebAPIClientPost</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,44 +31,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <Private>True</Private>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\WebAPIClient\bin\Debug\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
-    <Reference Include="System.Core">
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Net.Http">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Net.Http.Formatting">
-      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Extensions">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Web.Extensions.Design">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.CSharp">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Xml">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Vse.Web.Serialization, Version=1.0.4.0, Culture=neutral, PublicKeyToken=fb838febb49f46b2, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vse.Web.Serialization.ControlledSerializationJsonConverter.1.0.4\lib\net45\Vse.Web.Serialization.dll</HintPath>
-    </Reference>
+    <Reference Include="System.Xml" />
     <Reference Include="WebAPI">
-      <HintPath>D:\文档\WebAPI\服务端\WebAPI\bin\WebAPI.dll</HintPath>
+      <HintPath>..\..\服务端\WebAPI\bin\WebAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAPIClientGET">
+      <HintPath>..\WebAPIClient\bin\Debug\WebAPIClientGET.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -77,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
