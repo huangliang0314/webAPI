@@ -8,6 +8,7 @@ using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
+    // [RoutePrefix("books")]
     public class BookChaptersArrController : ApiController
     {
         private static List<Book> books;
@@ -27,7 +28,7 @@ namespace WebAPI.Controllers
 
             books = new List<Book>() {
 
-                new Book(1,"asp.net",chapters[0]),
+                new Book(1,"asp.net",chapters.ToArray()),
                 new Book(2,"C#高级编程")
 
             };
@@ -60,10 +61,14 @@ namespace WebAPI.Controllers
         {
         }
 
+        /*Route特性中的bookid与动作方法参数名字要一致*/
+        //[Route("{bookid:int}")]  需要配合前缀RoutePrefix属性
+        //[Route("books/{bookid:int}")]
+        //[Route("books/{bookid}/chapters/{chapterid}")]
         [Route("books/{bookid}")]
-        public IEnumerable<BookChapter> GetBookChapters(int id)
+        public IEnumerable<BookChapter> GetBookChapters(int bookid)
         {
-            return books.Where(book => book.id == id).SingleOrDefault().chapters;
+            return books.Where(book => book.id == bookid).SingleOrDefault().chapters;
         }
     }
 }
