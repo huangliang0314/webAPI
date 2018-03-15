@@ -10,7 +10,7 @@ namespace WebAPI.Controllers
 {
     public class BookChapterController : ApiController
     {
-        public static List<BookChapter> chapters;
+        private static List<BookChapter> chapters;
 
         static BookChapterController()
         {
@@ -58,6 +58,7 @@ namespace WebAPI.Controllers
             }
         }
 
+       
         // DELETE: api/BookChapter/5
         public void DeleteBookChapter(int id)
         {
