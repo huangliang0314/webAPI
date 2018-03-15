@@ -135,6 +135,7 @@
       <DependentUpon>FormulaModel1.edmx</DependentUpon>
     </Content>
     <Content Include="Web.config" />
+    <Content Include="备注信息.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -210,7 +211,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50626</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
